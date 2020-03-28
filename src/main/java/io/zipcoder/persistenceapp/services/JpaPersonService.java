@@ -5,7 +5,6 @@ import io.zipcoder.persistenceapp.models.Person;
 import java.util.*;
 
 public interface JpaPersonService {
-
     public Person getPerson(Long id);
 
     public void addPerson(Person person);

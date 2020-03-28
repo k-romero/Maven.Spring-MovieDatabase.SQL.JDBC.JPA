@@ -44,7 +44,7 @@ public class JdbcPersonServiceImpl implements JpaPersonService{
 
     @Override
     public List<Person> findAllWithMobile(String mobile) {
-        return null;
+        return (List<Person>) repo.findAll();
     }
 
     @Override
