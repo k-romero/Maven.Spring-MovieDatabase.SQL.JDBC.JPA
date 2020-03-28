@@ -1,15 +1,18 @@
 package io.zipcoder.persistenceapp.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Person {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Long id;
     private String firstName;
     private String lastName;
+
+    @Column(name = "BIRTHDAY")
     private String birthDate;
     private String mobile;
     private int homeId;
@@ -26,6 +29,7 @@ public class Person {
         this.homeId = homeId;
     }
 
+    @Column(name = "id")
     public Long getId() {
         return id;
     }

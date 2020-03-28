@@ -1,6 +1,7 @@
 package io.zipcoder.persistenceapp.controllers;
 
 import io.zipcoder.persistenceapp.models.Person;
+import io.zipcoder.persistenceapp.services.JdbcPersonServiceImpl;
 import io.zipcoder.persistenceapp.services.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,11 +17,18 @@ import java.util.Map;
 public class PersonController {
 
     @Autowired
-    PersonService service;
+    JdbcPersonServiceImpl service;
 
-    public PersonController(PersonService service) {
+    public PersonController(JdbcPersonServiceImpl service){
         this.service = service;
     }
+
+    //For JDBC PERSON SERVICE
+//    @Autowired
+//    PersonService service;
+//    public PersonController(PersonService service) {
+//        this.service = service;
+//    }
 
     @GetMapping("/person/{id}")
     public ResponseEntity<Person> getPersonById(@PathVariable Long id){
