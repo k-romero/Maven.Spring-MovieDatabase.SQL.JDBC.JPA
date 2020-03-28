@@ -5,7 +5,7 @@ CREATE TABLE movies (
   genre VARCHAR(50),
   imdb_score NUMERIC(10,1),
   rating VARCHAR(10)
-);
+
 
 INSERT INTO movies(title, runtime, genre, imdb_score, rating) VALUES ('Howard The Duck', 110, 'Sci-Fi', 4.6, 'PG');
 INSERT INTO movies(title, runtime, genre, imdb_score, rating) VALUES ('Lavalantula', 83, 'Horror', 4.7, 'TV-14');

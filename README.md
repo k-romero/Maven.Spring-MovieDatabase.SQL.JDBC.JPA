@@ -2,7 +2,7 @@
 
 ## Part 1: SQL
 
-The following lab is to be completed using the H2 Console. Once you have figured out the correct queries for each step, save a copy in a file called `src/main/resources/script.sql`. This will be how you submit this assignment. If at any time you need to reset the database, you can restart your Spring Boot server.
+The following lab is to be completed using the H2 Console. Once you have figured out the correct queries for each step, save a copy in a file called `src/main/resources/script-h2.sql`. This will be how you submit this assignment. If at any time you need to reset the database, you can restart your Spring Boot server.
 
 ### Mini Movie Database
 
@@ -35,7 +35,7 @@ This time let's find the average, maximum, and minimum IMDB score for movies of 
 
 That last query isn't very informative for ratings that only have 1 entry. use a `HAVING COUNT(*) > 1` clause to only show ratings with multiple movies showing.
 
-Let's make our movie list more child-friendly. Delete all entries that have a rating of R. Remember to record your query in `script.sql`.
+Let's make our movie list more child-friendly. Delete all entries that have a rating of R. Remember to record your query in `script-h2.sql`.
 
 ## Part 2: JDBC
 
