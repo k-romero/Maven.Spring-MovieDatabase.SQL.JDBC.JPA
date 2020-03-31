@@ -44,22 +44,22 @@ public class JdbcPersonServiceImpl implements JpaPersonService{
 
     @Override
     public List<Person> findAllWithMobile(String mobile) {
-        return (List<Person>) repo.findAll();
+        return (List<Person>) repo.findAllByMobile(mobile);
     }
 
     @Override
     public List<Person> findAllWithSurName(String lastName) {
-        return null;
+        return (List<Person>) repo.findAllByLastName(lastName);
     }
 
     @Override
     public List<Person> findAllWithFirstName(String firstName) {
-        return null;
+        return (List<Person>) repo.findAllByFirstName(firstName);
     }
 
     @Override
     public List<Person> findAllWithBirthDay(String birthDay) {
-        return null;
+        return (List<Person>) repo.findAllByBirthDate(birthDay);
     }
 
     @Override
